@@ -1,8 +1,8 @@
 class Element
   attr_accessor :datum, :next
-  def initialize(datum, n)
-    @datum = datum
-    @next = n
+  def initialize(datum, n=nil)
+    self.datum = datum
+    self.next = n
   end
 
   def to_a
