@@ -20,13 +20,31 @@ class Element
   end
 
   def reverse
-    current = Element.new(self.datum, self.next)
-    if current.to_a.size > 1
-      current_next = Element.new(current.next.datum, nil)
-      current.datum, current_next.datum = current_next.datum, current.datum
-    end
-    current.next = current_next
-    current
+    Element.from_a(self.to_a.reverse)
+    #current = Element.new(self.datum, self.next)
+    #if current.to_a.size > 1
+    #  current_next = Element.new(current.next.datum, nil)
+    #  current.datum, current_next.datum = current_next.datum, current.datum
+    #end
+    #current.next = current_next
+    #current
+    #-----------------------------------------
+    #current = Element.new(self.datum, nil)
+
+    #if self.next
+    #  next_element = Element.new(self.next.datum, self.next.next)
+    #end
+
+    #while next_element
+    #  next_next_element = next_element.next
+
+    #  next_element.next = Element.new(current.datum, current.next)
+
+    #  current = next_element
+    #  next_element = next_next_element
+    #end
+
+    #current
   end
 
   def self.from_a(array)
